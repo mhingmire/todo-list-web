@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TO-DO List
+		</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div id="auth-container">
+    		<h2>Sign Up / Sign In</h2>
+    		<input type="text" id="username" placeholder="Username" />
+    		<input type="password" id="password" placeholder="Password" />
+    		<button onclick="signUp()">Sign Up</button>
+    		<button onclick="signIn()">Sign In</button>
+		</div>
+		
+		<!--- creating container for the todo list -->
+    	<div id="todo-container">
+      		<div id="header">
+        		<h1>To-Do List</h1>
+      		</div>
+		
+			<!-- creating input box -->
+      		<div id="todo-form">
+        		<input
+					type="text"
+          			class="input-item"
+          			name="input_box"
+          			id="input-box"
+          			placeholder="Add Task"
+        		/>
+
+				<!-- date input -->
+  				<input
+    				type="date"
+    				class="input-item"
+    				name="input_date"
+    				id="task-date"
+  				/>
+
+  				<!-- add button -->
+  				<button
+    				id="input-button"
+    				class="action-btn"
+    				name="add_task"
+    				onclick="addTask()"
+  				>
+    				Add
+  				</button>
+			</div>
+
+			<!-- filter buttons -->
+			<div id="filters">
+  				<button
+    				class="filter-btn"
+    				name="filter_all"
+    				onclick="filterTasks('all')"
+  			>
+    			All Tasks
+  				</button>
+  				<button
+    				class="filter-btn"
+    				name="filter_active"
+    				onclick="filterTasks('active')"
+  			>
+    			Active Tasks
+  				</button>
+  				<button
+    				class="filter-btn"
+    				name="filter_completed"
+    				onclick="filterTasks('completed')"
+  			>
+    			Completed Tasks
+  				</button>
+			</div>
+      	</div>
+		
+		<!-- task list -->
+      	<h2>Task List</h2>
+      	<ul id="list-container"></ul>
+
+		<hr />
+		<!-- task list counter -->
+		<div class="counter-container">
+  			<div id="task-counters">
+    			Completed: <span id="completed-counter">0</span> | Uncompleted:<span id="uncompleted-counter">0</span>
+  		</div>
+
+		<!-- log out button -->
+    	<div id="logout-container">
+  			<button id="logout-button" onclick="logout()">Log Out</button>
+		</div>
+    </div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+	</body>
+</html>
